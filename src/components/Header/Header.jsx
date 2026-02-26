@@ -1,11 +1,9 @@
 import React from 'react';
-import styles from './Header.module.css'; // Подключаем CSS-модуль
+import styles from './Header.module.css';
 
 const Header = () => {
-  // Функция-заглушка для плавного скролла, которую мы реализуем позже
   const scrollToSection = (sectionId) => {
     console.log(`Прокрутка к разделу: ${sectionId}`);
-    // Здесь позже будет логика для поиска элемента по ID и скролла
   };
 
   return (
@@ -30,7 +28,6 @@ const Header = () => {
           </li>
         </ul>
       </nav>
-      {/* Пустой div для баланса, если потребуется, но пока оставим так */}
       <div className={styles.placeholder}></div>
     </header>
   );

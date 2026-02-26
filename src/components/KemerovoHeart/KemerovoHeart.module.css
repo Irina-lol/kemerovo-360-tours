@@ -1,0 +1,194 @@
+.heart {
+  background-color: white;
+  padding: 80px 2rem;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #e0e0e0;
+  color: #666;
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.mainTitle {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: black;
+  margin: 0 0 3rem 0;
+  line-height: 1.2;
+}
+
+.cardsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.card {
+  background-color: #e0e0e0;
+  border: 1px solid #5d5858;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: left;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.cardCircle {
+  width: 40px;
+  height: 40px;
+  background-color: #444;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1b1b1b;
+  margin: 0 0 0.8rem 0;
+}
+
+.cardDescription {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #2c2b2b;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.secondTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  margin: 0 0 3rem 0;
+}
+
+.guideBlock {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin-bottom: 4rem;
+  text-align: left;
+}
+
+.guideImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.guideImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.guideContent {
+  color: black;
+}
+
+.guideName {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 1.5rem 0;
+}
+
+.guideDescription {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0 0 1.2rem 0;
+  color: black;
+}
+
+.boldText {
+  font-weight: 700;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNumber {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #444;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  color: #444;
+  text-transform: lowercase;
+}
+
+@media (max-width: 992px) {
+  .cardsGrid {
+    gap: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2.2rem;
+  }
+
+  .secondTitle {
+    font-size: 2rem;
+  }
+
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .guideBlock {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .guideImageWrapper {
+    order: -1;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .guideName {
+    font-size: 1.8rem;
+  }
+}
