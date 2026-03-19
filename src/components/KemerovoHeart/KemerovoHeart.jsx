@@ -1,4 +1,3 @@
-// KemerovoHeart.jsx
 import React from 'react';
 import styles from './KemerovoHeart.module.css';
 import heartImage from '../../assets/heart.png';

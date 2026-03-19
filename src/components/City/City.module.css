@@ -1,4 +1,3 @@
-/* City.module.css */
 .city {
   background-color: white;
   padding: 80px 2rem;
@@ -66,7 +65,6 @@
   gap: 3rem;
   margin-bottom: 2rem;
   align-items: start;
-  /* Меняем stretch на start для более точного контроля */
 }
 
 .column {
@@ -76,22 +74,18 @@
   height: 100%;
 }
 
-/* Фиксируем высоту каждого блока с заголовком, чтобы они совпадали */
 .contentBlock {
   margin-bottom: 0;
   flex-shrink: 0;
-  /* Добавляем минимальную высоту, чтобы блоки были одинаковыми */
   min-height: fit-content;
 }
 
-/* Гарантируем, что заголовки занимают одинаковую высоту */
 .blockTitle {
   font-size: 1.3rem;
   font-weight: bold;
   color: #1E2430;
   margin: 0 0 1rem 0;
   min-height: 3rem;
-  /* Фиксируем примерную высоту заголовка */
   display: flex;
   align-items: flex-start;
 }
@@ -272,44 +266,6 @@
   box-shadow: 0 4px 12px rgba(47, 111, 166, 0.3);
 }
 
-.imageGallery {
-  margin-top: 4rem;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.galleryGrid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.galleryItem {
-  aspect-ratio: 1 / 1;
-  background-color: #f5f5f5;
-  border-radius: 12px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.galleryItem:hover {
-  transform: scale(1.05);
-}
-
-.galleryImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
 @media (max-width: 992px) {
   .mainTitle {
     font-size: 2rem;
@@ -321,11 +277,6 @@
 
   .twoColumns {
     gap: 2rem;
-  }
-
-  .galleryGrid {
-    max-width: 100%;
-    margin: 0 auto;
   }
 }
 
@@ -380,12 +331,6 @@
     padding: 1.2rem;
     font-size: 1rem;
   }
-
-  .galleryGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin: 0 auto;
-  }
 }
 
 @media (max-width: 480px) {
@@ -415,12 +360,6 @@
 
   .groupPriceCard {
     padding: 1.5rem;
-  }
-
-  .galleryGrid {
-    grid-template-columns: 1fr;
-    max-width: 100%;
-    margin: 0 auto;
   }
 
   .button {

@@ -1,12 +1,5 @@
-// KemerovoFoot.jsx
 import React from 'react';
 import styles from './KemerovoFoot.module.css';
-import foot1 from '../../assets/mani.png';
-import foot2 from '../../assets/painting.jpg';
-import foot3 from '../../assets/roof.jpg';
-import foot4 from '../../assets/tulip.jpg';
-import foot5 from '../../assets/nlo.jpg';
-import foot6 from '../../assets/woman.png';
 
 const KemerovoFoot = () => {
   return (
@@ -105,29 +98,6 @@ const KemerovoFoot = () => {
             <button className={`${styles.button} ${styles.buttonFilled}`}>
               <span className={styles.buttonIcon}>📞</span> 89235003020
             </button>
-          </div>
-
-          <div className={styles.imageGallery}>
-            <div className={styles.galleryGrid}>
-              <div className={styles.galleryItem}>
-                <img src={foot1} alt="Кемерово пешком" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={foot2} alt="Кемерово пешком" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={foot3} alt="Кемерово пешком" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={foot4} alt="Кемерово пешком" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={foot5} alt="Кемерово пешком" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={foot6} alt="Кемерово пешком" className={styles.galleryImage} />
-              </div>
-            </div>
           </div>
 
         </div>

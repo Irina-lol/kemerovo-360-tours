@@ -1,4 +1,3 @@
-// PanoramicExcursions.jsx
 import React from 'react';
 import styles from './PanoramicExcursions.module.css';
 

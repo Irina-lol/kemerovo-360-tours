@@ -1,4 +1,3 @@
-// Header.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 
@@ -18,7 +17,6 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
-  // Отслеживание активной секции при скролле
   useEffect(() => {
     const handleScroll = () => {
       const sections = [
@@ -31,7 +29,7 @@ const Header = () => {
         'footer'
       ];
 
-      const scrollPosition = window.scrollY + 100; // небольшой offset
+      const scrollPosition = window.scrollY + 100;
 
       for (const sectionId of sections) {
         const element = document.getElementById(sectionId);
@@ -53,7 +51,7 @@ const Header = () => {
     setActiveSection(sectionId);
     const element = document.getElementById(sectionId);
     if (element) {
-      const headerOffset = 80; // высота хедера
+      const headerOffset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
@@ -82,7 +80,7 @@ const Header = () => {
   return (
     <>
       <header className={styles.header}>
-        <div className={styles.logo}>360°</div>
+        <div className={styles.logo}>Кемерово 360°</div>
 
         <nav className={styles.desktopNav}>
           <ul className={styles.navList}>

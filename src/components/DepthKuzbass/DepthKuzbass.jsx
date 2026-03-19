@@ -1,13 +1,6 @@
-// DepthKuzbass.jsx
 import React from 'react';
 import styles from './DepthKuzbass.module.css';
 import depthImage from '../../assets/depthno.jpg';
-import depth1 from '../../assets/depth.png';
-import depth2 from '../../assets/dep.jpg';
-import depth3 from '../../assets/dept.jpg';
-import depth4 from '../../assets/depthgo.jpg';
-import depth5 from '../../assets/depthzd.jpg';
-import depth6 from '../../assets/wheel.png';
 
 const DepthKuzbass = () => {
   return (
@@ -110,30 +103,6 @@ const DepthKuzbass = () => {
               <span className={styles.buttonIcon}>📞</span> 89235003020
             </button>
           </div>
-
-          <div className={styles.imageGallery}>
-            <div className={styles.galleryGrid}>
-              <div className={styles.galleryItem}>
-                <img src={depth1} alt="Угольный разрез" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={depth2} alt="Угольный разрез" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={depth3} alt="Угольный разрез" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={depth4} alt="Угольный разрез" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={depth5} alt="Угольный разрез" className={styles.galleryImage} />
-              </div>
-              <div className={styles.galleryItem}>
-                <img src={depth6} alt="Угольный разрез" className={styles.galleryImage} />
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>

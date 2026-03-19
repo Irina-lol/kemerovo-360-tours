@@ -1,12 +1,5 @@
-// City.jsx
 import React from 'react';
 import styles from './City.module.css';
-import human from '../../assets/human.jpg';
-import manhourse from '../../assets/manhourse.jpg';
-import statue from '../../assets/statue.jpg';
-import tallstatue from '../../assets/tallstatue.jpg';
-import fire from '../../assets/fire.jpg';
-import star from '../../assets/star.jpg';
 
 const City = () => {
   return (
@@ -19,7 +12,7 @@ const City = () => {
         <h2 className={styles.mainTitle}>Откройте город, не теряя времени. Индивидуальная экскурсия-погружение в столице Кузбасса!</h2>
 
         <p className={styles.description}>
-          Вы в Кемерово всего на день-два и хотите составить настоящее, глубокое впечатление о городе, но не знаете, с чего начать? Специально для гостей «Олимп Плаза» создан 2-часовой автомобильный маршрут, который подарит вам полную, связную картину Кемерово.
+          Вы в Кемерово всего на день-два и хотите составить настоящее, глубокое впечатление о городе, но не знаете, с чего начать? Специально для гостей создан 2-часовой автомобильный маршрут, который подарит вам полную, связную картину Кемерово.
         </p>
         <p className={styles.description}>
           Это индивидуальное путешествие, которое покажет вам город со всех сторон. Мы поднимемся на смотровые площадки, чтобы охватить Кемерово панорамным взглядом, пройдемся по самым интересным местам и вместе раскроем истории, которые помогут лучше почувствовать его характер и уникальную душу.
@@ -66,7 +59,7 @@ const City = () => {
             </div>
 
             <div className={styles.contentBlock}>
-              <h4 className={styles.blockTitle}>           Истории в камне и лицах</h4>
+              <h4 className={styles.blockTitle}>Истории в камне и лицах</h4>
               <ul className={styles.list}>
                 <li>Как за неполные 100 лет заштатный город превратился в один из самых значимых центров Сибири. Познакомимся с угольными генералами, инженерами и руководителями, чьи амбиции создали современный Кемерово.</li>
               </ul>
@@ -124,29 +117,6 @@ const City = () => {
           <button className={`${styles.button} ${styles.buttonFilled}`}>
             <span className={styles.buttonIcon}>📞</span> 89235003020
           </button>
-        </div>
-
-        <div className={styles.imageGallery}>
-          <div className={styles.galleryGrid}>
-            <div className={styles.galleryItem}>
-              <img src={human} alt="human" className={styles.galleryImage} />
-            </div>
-            <div className={styles.galleryItem}>
-              <img src={manhourse} alt="manhourse" className={styles.galleryImage} />
-            </div>
-            <div className={styles.galleryItem}>
-              <img src={statue} alt="statue" className={styles.galleryImage} />
-            </div>
-            <div className={styles.galleryItem}>
-              <img src={tallstatue} alt="tallstatue" className={styles.galleryImage} />
-            </div>
-            <div className={styles.galleryItem}>
-              <img src={fire} alt="fire" className={styles.galleryImage} />
-            </div>
-            <div className={styles.galleryItem}>
-              <img src={star} alt="star" className={styles.galleryImage} />
-            </div>
-          </div>
         </div>
 
       </div>
