@@ -1,5 +1,6 @@
+/* KemerovoHeart.module.css */
 .heart {
-  background-color: white;
+  background: linear-gradient(135deg, #F5F7FA 0%, #FFFFFF 100%);
   padding: 80px 2rem;
   box-sizing: border-box;
 }
@@ -8,29 +9,33 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  text-align: center;
 }
 
+/* Все заголовки и контент выровнены по левому краю */
 .badge {
   display: inline-block;
-  background-color: #e0e0e0;
-  color: #666;
+  background-color: #E3E6EB;
+  /* Серый фон как в KemerovoHeart */
+  color: #33363F;
+  /* Тёмно-серый текст */
   padding: 0.5rem 1.2rem;
-  border-radius: 30px;
+  border-radius: 12px;
+  /* Как в KemerovoHeart */
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 1.5rem;
-  text-transform: uppercase;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .mainTitle {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: bold;
-  text-transform: uppercase;
-  color: black;
+  text-transform: none;
+  color: #1E2430;
   margin: 0 0 3rem 0;
   line-height: 1.2;
+  text-align: left;
 }
 
 .cardsGrid {
@@ -41,22 +46,25 @@
 }
 
 .card {
-  background-color: #e0e0e0;
-  border: 1px solid #5d5858;
-  border-radius: 16px;
+  background-color: #E3E6EB;
+  border: none;
+  border-radius: 12px;
   padding: 2rem 1.5rem;
   text-align: left;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 .card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
 .cardCircle {
-  width: 40px;
-  height: 40px;
-  background-color: #444;
+  width: 48px;
+  height: 48px;
+  background-color: #33363F;
+  /* Тёмно-серый для кружочков */
   border-radius: 50%;
   margin-bottom: 1.5rem;
 }
@@ -64,66 +72,75 @@
 .cardTitle {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #1b1b1b;
+  color: #1E2430;
   margin: 0 0 0.8rem 0;
 }
 
 .cardDescription {
   font-size: 1rem;
   line-height: 1.5;
-  color: #2c2b2b;
+  color: #33363F;
   margin: 0;
-  opacity: 0.8;
 }
 
 .secondTitle {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: bold;
-  color: black;
+  color: #1E2430;
   margin: 0 0 3rem 0;
+  text-align: left;
+  text-transform: none;
 }
 
 .guideBlock {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
-  align-items: center;
+  align-items: start;
   margin-bottom: 4rem;
   text-align: left;
 }
 
 .guideImageWrapper {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  /* МЕНЯЕМ С flex-end НА flex-start */
+  align-items: flex-start;
+  padding-top: 0;
+  width: 100%;
+  /* Добавляем ширину 100% */
 }
 
 .guideImage {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Добавляем margin: 0 чтобы не было смещения */
+  margin: 0;
 }
 
 .guideContent {
-  color: black;
+  color: #1E2430;
 }
 
 .guideName {
   font-size: 2rem;
   font-weight: bold;
   margin: 0 0 1.5rem 0;
+  color: #1E2430;
 }
 
 .guideDescription {
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 0 0 1.2rem 0;
-  color: black;
+  color: #33363F;
 }
 
 .boldText {
   font-weight: 700;
+  color: #1E2430;
 }
 
 .statsGrid {
@@ -135,22 +152,30 @@
 
 .statItem {
   text-align: center;
+  padding: 2rem 1rem;
+  transition: transform 0.2s ease;
+}
+
+.statItem:hover {
+  transform: translateY(-5px);
 }
 
 .statNumber {
   font-size: 3.5rem;
   font-weight: bold;
-  color: #444;
+  color: #33363F;
   line-height: 1.2;
   margin-bottom: 0.5rem;
 }
 
 .statLabel {
   font-size: 1.1rem;
-  color: #444;
+  color: #33363F;
   text-transform: lowercase;
+  font-weight: 500;
 }
 
+/* Адаптивность */
 @media (max-width: 992px) {
   .cardsGrid {
     gap: 1.5rem;
@@ -159,28 +184,53 @@
   .cardTitle {
     font-size: 1.3rem;
   }
+
+  .guideImage {
+    max-width: 100%;
+  }
+
+  .guideImageWrapper {
+    justify-content: flex-start;
+    /* Оставляем слева */
+  }
 }
 
 @media (max-width: 768px) {
+  .heart {
+    padding: 60px 1.5rem;
+  }
+
   .mainTitle {
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
   }
 
   .secondTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
   }
 
   .cardsGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
   }
 
   .guideBlock {
     grid-template-columns: 1fr;
     gap: 2rem;
+    align-items: center;
   }
 
   .guideImageWrapper {
     order: -1;
+    justify-content: center;
+    /* На мобилке по центру */
+    align-items: center;
+  }
+
+  .guideImage {
+    max-width: 80%;
   }
 
   .statsGrid {
@@ -188,7 +238,58 @@
     gap: 2rem;
   }
 
+  .statItem {
+    padding: 1rem;
+  }
+
   .guideName {
+    font-size: 1.6rem;
+  }
+
+  .guideDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heart {
+    padding: 40px 1rem;
+  }
+
+  .mainTitle {
     font-size: 1.8rem;
+  }
+
+  .secondTitle {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+
+  .cardTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardDescription {
+    font-size: 0.95rem;
+  }
+
+  .guideImage {
+    max-width: 100%;
+  }
+
+  .guideImageWrapper {
+    justify-content: center;
+    /* На маленьких экранах по центру */
+  }
+
+  .statNumber {
+    font-size: 2.8rem;
+  }
+
+  .statLabel {
+    font-size: 1rem;
   }
 }

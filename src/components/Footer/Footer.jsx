@@ -1,69 +1,82 @@
-import React from "react";
-import styles from './Footer.module.css'
+// Footer.jsx
+import React from 'react';
+import styles from './Footer.module.css';
 
 const Footer = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className={styles.footer} id="footer">
       <div className={styles.container}>
-        <div className={styles.mainSection}>
-          <div className={styles.infoBlock}>
-            <h3 className={styles.title}>Кемерово 360°</h3>
-            <p className={styles.description}>
-              Авторские экскурсии по столице Кузбасса<br />
-              от профессионального гида-историка
+
+        <h2 className={styles.mainTitle}>Забронируйте экскурсию</h2>
+
+        <p className={styles.description}>
+          Выберите удобный формат знакомства с Кемерово и Кузбассом. Индивидуальные и групповые экскурсии, онлайн-туры с интерактивным сопровождением, специальные предложения для корпоративных групп.
+        </p>
+
+        <div className={styles.cardsRow}>
+          <div className={styles.card}>
+            <div className={styles.cardCircle}></div>
+            <h3 className={styles.cardTitle}>Удобное бронирование</h3>
+            <p className={styles.cardText}>
+              Выберите дату и время экскурсии в удобной форме записи. Бронирование индивидуальных туров возможно день в день
             </p>
-            <div className={styles.guideInfo}>
-              <p className={styles.guideName}>Ольга Кощеева Бессмертная</p>
-              <p className={styles.guideCreds}>
-                Аттестованный гид<br />
-                Руководитель школы гидов VISIT KUZBASS
-              </p>
+          </div>
+
+          <div className={styles.card}>
+            <div className={styles.cardCircle}></div>
+            <h3 className={styles.cardTitle}>Специальные предложения</h3>
+            <p className={styles.cardText}>
+              Сезонные акции, корпоративные программы и подарочные сертификаты на экскурсии по Кузбассу
+            </p>
+          </div>
+        </div>
+
+        <h3 className={styles.contactTitle}>Контакты и социальные сети</h3>
+
+        <div className={styles.twoColumns}>
+          <div className={styles.leftColumn}>
+            <h4 className={styles.columnTitle}>Свяжитесь с гидом</h4>
+            <div className={styles.phone}>8 923 500 30 20</div>
+            <p className={styles.columnText}>
+              Аттестованный гид, руководитель школы гидов VISIT KUZBASS
+            </p>
+            <p className={styles.columnText}>
+              Отвечу на все вопросы и помогу выбрать идеальный маршрут
+            </p>
+
+            <div className={styles.verticalButtons}>
+              <button className={`${styles.button} ${styles.buttonBrown}`}>
+                <span className={styles.buttonIcon}>📱</span> Написать в TG
+              </button>
+              <button className={`${styles.button} ${styles.buttonBrown}`}>
+                <span className={styles.buttonIcon}>💬</span> Написать в MAX
+              </button>
             </div>
           </div>
 
-          <div className={styles.contactsBlock}>
-            <h4 className={styles.subtitle}>Свяжитесь с гидом</h4>
-            <a href="tel:89235003020" className={styles.phone}>
-              89235003020
-            </a>
-
-            <div className={styles.socialButtons}>
-              <button className={`${styles.socialBtn} ${styles.tg}`}>
-                Написать в TG
-              </button>
-              <button className={`${styles.socialBtn} ${styles.max}`}>
-                Написать в MAX
-              </button>
-            </div>
-          </div>
-
-          <div className={styles.subscribeBlock}>
-            <h4 className={styles.subtitle}>Будьте в курсе</h4>
-            <p className={styles.subscribeText}>
+          <div className={styles.rightColumn}>
+            <h4 className={styles.columnTitle}>Будьте в курсе</h4>
+            <p className={styles.columnText}>
               Подпишитесь на рассылку экскурсий и событий Кемерово 360°
             </p>
-            <div className={styles.subscribeButtons}>
-              <button className={`${styles.subscribeBtn} ${styles.tg}`}>
-                Написать в TG
+            <p className={styles.columnText}>
+              Анонсы новых маршрутов, специальные предложения и городские истории
+            </p>
+
+            <div className={styles.verticalButtons}>
+              <button className={`${styles.button} ${styles.buttonBrown}`}>
+                <span className={styles.buttonIcon}>📱</span> Подписаться в TG
               </button>
-              <button className={`${styles.subscribeBtn} ${styles.max}`}>
-                Написать в MAX
+              <button className={`${styles.button} ${styles.buttonBrown}`}>
+                <span className={styles.buttonIcon}>💬</span> Подписаться в MAX
               </button>
             </div>
           </div>
         </div>
 
-        <div className={styles.bottomSection}>
-          <p className={styles.copyright}>
-            2026 Кемерово 360°. Все права защищены
-          </p>
-          <p className={styles.madeWith}>
-            Made with ❤️ в Кузбассе
-          </p>
-        </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;

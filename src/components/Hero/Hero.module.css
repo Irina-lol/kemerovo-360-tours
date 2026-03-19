@@ -1,5 +1,6 @@
+/* Hero.module.css */
 .hero {
-  background-color: #e0f2fe;
+  background: linear-gradient(135deg, #C7D9F2 0%, #E3E6EB 100%);
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -8,17 +9,18 @@
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 3rem;
+  gap: 4rem;
   align-items: center;
 }
 
 .content {
-  color: black;
+  color: #1E2430;
+  text-align: left;
 }
 
 .title {
@@ -27,12 +29,14 @@
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
   text-transform: uppercase;
+  color: #1E2430;
 }
 
 .description {
   font-size: 1.1rem;
   line-height: 1.6;
   margin: 0 0 2rem 0;
+  color: #33363F;
   opacity: 0.9;
 }
 
@@ -40,6 +44,7 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .button {
@@ -49,59 +54,183 @@
   border: 2px solid transparent;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .buttonPrimary {
-  background-color: #333;
+  background-color: #33363F;
   color: white;
-  border-color: #333;
+  border-color: #33363F;
 }
 
 .buttonPrimary:hover {
-  background-color: #555;
-  border-color: #555;
+  background-color: #1E4F7A;
+  border-color: #1E4F7A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(47, 111, 166, 0.3);
 }
 
 .buttonSecondary {
   background-color: transparent;
-  color: black;
-  border: 2px solid black;
+  color: #1E2430;
+  border: 2px solid #33363F;
 }
 
 .buttonSecondary:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: #1E4F7A;
+  color: #1E2430;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(165, 195, 161, 0.3);
 }
 
 .imageWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .image {
-  max-width: 100%;
-  height: 590px;
+  width: 100%;
+  height: auto;
+  max-height: 600px;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-@media (max-width: 768px) {
+/* Планшеты и маленькие ноутбуки */
+@media (max-width: 900px) {
+  .hero {
+    min-height: auto;
+    padding: 100px 1.5rem 3rem;
+  }
+
   .container {
     grid-template-columns: 1fr;
     gap: 2rem;
-    text-align: center;
   }
 
-  .title {
-    font-size: 2rem;
+  .content {
+    text-align: left;
+    max-width: 700px;
+    margin: 0;
   }
 
   .buttonGroup {
-    justify-content: center;
+    justify-content: flex-start;
   }
 
   .imageWrapper {
-    order: -1;
+    order: 0;
+    margin-top: 1rem;
+  }
+
+  .image {
+    max-height: 450px;
+  }
+}
+
+/* Мобильные устройства */
+@media (max-width: 768px) {
+  .hero {
+    padding: 90px 1rem 2.5rem;
+  }
+
+  .content {
+    max-width: 100%;
+    padding: 0;
+    /* Убираем внутренние отступы */
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    max-width: 300px;
+    /* Ограничиваем ширину кнопок */
+    margin: 0 auto;
+    /* Центрируем блок с кнопками */
+  }
+
+  .button {
+    width: 100%;
+    padding: 0.7rem 1.5rem;
+    box-sizing: border-box;
+  }
+
+  /* Выравниваем текст по ширине кнопок */
+  .title,
+  .description {
+    max-width: 300px;
+    /* Такая же ширина, как у кнопок */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    /* Текст внутри остается по левому краю */
+  }
+
+  .image {
+    max-height: 350px;
+  }
+}
+
+/* Маленькие мобильные */
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 0.8rem 2rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    max-width: 280px;
+    /* Немного уже под размер кнопок */
+  }
+
+  .description {
+    font-size: 0.95rem;
+    max-width: 280px;
+  }
+
+  .buttonGroup {
+    max-width: 280px;
+  }
+
+  .image {
+    max-height: 280px;
+  }
+}
+
+/* Очень маленькие экраны */
+@media (max-width: 360px) {
+  .title {
+    font-size: 1.3rem;
+    max-width: 260px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    max-width: 260px;
+  }
+
+  .buttonGroup {
+    max-width: 260px;
+  }
+
+  .image {
+    max-height: 220px;
   }
 }

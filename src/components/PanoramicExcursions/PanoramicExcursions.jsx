@@ -1,9 +1,10 @@
+// PanoramicExcursions.jsx
 import React from 'react';
 import styles from './PanoramicExcursions.module.css';
 
 const PanoramicExcursions = () => {
   return (
-    <section className={styles.panoramic}>
+    <section className={styles.panoramic} id="panoramic-excursions">
       <div className={styles.innerContainer}>
         <h2 className={styles.title}>Панорамные экскурсии 360°: что вас ждёт?</h2>
         <p className={styles.description}>

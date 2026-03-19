@@ -1,3 +1,4 @@
+/* City.module.css */
 .city {
   background-color: white;
   padding: 80px 2rem;
@@ -10,49 +11,52 @@
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
-  text-align: center;
+  text-align: left;
 }
 
 .badge {
   display: inline-block;
-  background-color: #e0e0e0;
-  color: #666;
-  padding: 1rem 3rem;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  font-weight: 500;
+  background-color: #E3E6EB;
+  color: #33363F;
+  padding: 0.5rem 1.2rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
 .heroTitle {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 800;
-  color: #333;
+  color: #1E2430;
   margin: 0 0 1rem 0;
   line-height: 1.1;
   letter-spacing: 2px;
 }
 
 .mainTitle {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #333;
-  margin: 0 0 1.5rem auto;
+  color: #1E2430;
+  margin: 0 0 1.5rem 0;
   line-height: 1.3;
+  max-width: 900px;
 }
 
 .description {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #444;
+  color: #33363F;
   margin: 0 0 1.2rem 0;
+  max-width: 900px;
 }
 
 .sectionTitle {
   font-size: 2rem;
   font-weight: bold;
-  color: #333;
+  color: #1E2430;
   margin: 2.5rem 0 2rem 0;
 }
 
@@ -61,7 +65,8 @@
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   margin-bottom: 2rem;
-  align-items: stretch;
+  align-items: start;
+  /* Меняем stretch на start для более точного контроля */
 }
 
 .column {
@@ -71,22 +76,24 @@
   height: 100%;
 }
 
+/* Фиксируем высоту каждого блока с заголовком, чтобы они совпадали */
 .contentBlock {
   margin-bottom: 0;
+  flex-shrink: 0;
+  /* Добавляем минимальную высоту, чтобы блоки были одинаковыми */
+  min-height: fit-content;
 }
 
+/* Гарантируем, что заголовки занимают одинаковую высоту */
 .blockTitle {
   font-size: 1.3rem;
   font-weight: bold;
-  color: #333;
+  color: #1E2430;
   margin: 0 0 1rem 0;
-}
-
-.divider {
-  width: 100%;
-  height: 2px;
-  background-color: #ddd;
-  margin: 0.5rem 0;
+  min-height: 3rem;
+  /* Фиксируем примерную высоту заголовка */
+  display: flex;
+  align-items: flex-start;
 }
 
 .list {
@@ -98,7 +105,7 @@
 .list li {
   font-size: 1rem;
   line-height: 1.6;
-  color: #444;
+  color: #33363F;
   margin-bottom: 0.8rem;
   padding-left: 1.5rem;
   position: relative;
@@ -108,7 +115,6 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: #666;
   font-size: 1.2rem;
 }
 
@@ -128,16 +134,17 @@
 }
 
 .priceCard {
-  background-color: #2c3e2c;
+  background-color: #A5C3A1;
   padding: 2rem;
   border-radius: 16px;
-  color: white;
+  color: #1E2430;
+  text-align: left;
 }
 
 .priceTitle {
   font-size: 1.3rem;
   font-weight: 600;
-  color: white;
+  color: #1E2430;
   margin-bottom: 0.8rem;
   opacity: 0.9;
 }
@@ -145,29 +152,72 @@
 .priceValue {
   font-size: 3rem;
   font-weight: bold;
-  color: white;
+  color: #1E2430;
   margin-bottom: 1rem;
   line-height: 1.2;
 }
 
 .priceIncludes {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: #33363F;
+  line-height: 1.5;
+}
+
+.groupPriceCard {
+  background-color: #A5C3A1;
+  padding: 2rem;
+  border-radius: 12px;
+  color: #1E2430;
+  margin: 1.5rem 0 2rem 0;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.groupPriceCard .priceTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1E2430;
+  margin-bottom: 0.8rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.groupPriceCard .priceValue {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #1E2430;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.groupPriceCard .priceIncludes {
+  font-size: 1rem;
+  color: #33363F;
+  line-height: 1.5;
+  margin-bottom: 0.5rem;
+}
+
+.groupPriceCard .priceNote {
+  font-size: 1rem;
+  color: #33363F;
   line-height: 1.5;
 }
 
 .additionalCard {
-  background-color: #f0f0f0;
+  background-color: #E3E6EB;
   padding: 1.5rem 2rem;
-  border-radius: 16px;
+  border-radius: 12px;
   margin: 2rem 0 3rem 0;
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #333;
+  color: #33363F;
+  text-align: left;
 }
 
 .boldText {
   font-weight: 700;
+  color: #33363F;
 }
 
 .buttonsGroup {
@@ -175,15 +225,16 @@
   gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0 auto;
 }
 
 .button {
   padding: 0.8rem 2rem;
   font-size: 1.1rem;
   font-weight: 500;
-  border-radius: 50px;
+  border-radius: 12px;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -197,23 +248,66 @@
 
 .buttonOutline {
   background-color: transparent;
-  border-color: #333;
-  color: #333;
+  border-color: #33363F;
+  color: #1E2430;
 }
 
 .buttonOutline:hover {
-  background-color: #f5f5f5;
+  background-color: #33363F;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(47, 111, 166, 0.3);
 }
 
 .buttonFilled {
-  background-color: #666;
-  border-color: #666;
+  background-color: #33363F;
+  border-color: #33363F;
   color: white;
 }
 
 .buttonFilled:hover {
-  background-color: #555;
-  border-color: #555;
+  background-color: #1E4F7A;
+  border-color: #1E4F7A;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(47, 111, 166, 0.3);
+}
+
+.imageGallery {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.galleryItem {
+  aspect-ratio: 1 / 1;
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.galleryItem:hover {
+  transform: scale(1.05);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @media (max-width: 992px) {
@@ -228,11 +322,20 @@
   .twoColumns {
     gap: 2rem;
   }
+
+  .galleryGrid {
+    max-width: 100%;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
   .city {
     padding: 60px 1.5rem;
+  }
+
+  .heroTitle {
+    font-size: 2.8rem;
   }
 
   .mainTitle {
@@ -256,24 +359,40 @@
 
   .buttonsGroup {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    width: 100%;
   }
 
   .button {
     width: 100%;
+    max-width: 300px;
   }
 
   .priceValue {
     font-size: 2.5rem;
   }
 
+  .groupPriceCard .priceValue {
+    font-size: 1.8rem;
+  }
+
   .additionalCard {
     padding: 1.2rem;
     font-size: 1rem;
   }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+
   .mainTitle {
     font-size: 1.5rem;
   }
@@ -286,7 +405,39 @@
     font-size: 2rem;
   }
 
+  .groupPriceCard .priceValue {
+    font-size: 1.5rem;
+  }
+
   .priceCard {
     padding: 1.5rem;
+  }
+
+  .groupPriceCard {
+    padding: 1.5rem;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .button {
+    max-width: 280px;
+  }
+}
+
+@media (max-width: 360px) {
+  .heroTitle {
+    font-size: 1.8rem;
+  }
+
+  .mainTitle {
+    font-size: 1.3rem;
+  }
+
+  .button {
+    max-width: 260px;
   }
 }

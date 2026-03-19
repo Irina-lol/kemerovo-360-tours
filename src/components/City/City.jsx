@@ -1,13 +1,20 @@
+// City.jsx
 import React from 'react';
 import styles from './City.module.css';
+import human from '../../assets/human.jpg';
+import manhourse from '../../assets/manhourse.jpg';
+import statue from '../../assets/statue.jpg';
+import tallstatue from '../../assets/tallstatue.jpg';
+import fire from '../../assets/fire.jpg';
+import star from '../../assets/star.jpg';
 
 const City = () => {
   return (
-    <section className={styles.city}>
+    <section className={styles.city} id="city">
       <div className={styles.container}>
         <div className={styles.badge}>хит продаж</div>
 
-        <h1 className={styles.heroTitle}>Кемерово 360°</h1>
+        <h1 className={styles.heroTitle}>«Кемерово 360°»</h1>
 
         <h2 className={styles.mainTitle}>Откройте город, не теряя времени. Индивидуальная экскурсия-погружение в столице Кузбасса!</h2>
 
@@ -32,16 +39,12 @@ const City = () => {
               </ul>
             </div>
 
-            <div className={styles.divider}></div>
-
             <div className={styles.contentBlock}>
               <h4 className={styles.blockTitle}>Архитектурная летопись XX века</h4>
               <ul className={styles.list}>
                 <li>Ансамбли сталинской неоклассики, конструктивистский жилой квартал, соцгород и голландское наследие. Архитектура, вписанная в общесоветские тренды с уникальными чертами Кузбасса.</li>
               </ul>
             </div>
-
-            <div className={styles.divider}></div>
 
             <div className={styles.contentBlock}>
               <h4 className={styles.blockTitle}>Кому подойдет?</h4>
@@ -62,16 +65,12 @@ const City = () => {
               </ul>
             </div>
 
-            <div className={styles.divider}></div>
-
             <div className={styles.contentBlock}>
-              <h4 className={styles.blockTitle}>Истории в камне и лицах</h4>
+              <h4 className={styles.blockTitle}>           Истории в камне и лицах</h4>
               <ul className={styles.list}>
                 <li>Как за неполные 100 лет заштатный город превратился в один из самых значимых центров Сибири. Познакомимся с угольными генералами, инженерами и руководителями, чьи амбиции создали современный Кемерово.</li>
               </ul>
             </div>
-
-            <div className={styles.divider}></div>
 
             <div className={styles.contentBlock}>
               <h4 className={styles.blockTitle}>Практическая информация</h4>
@@ -98,6 +97,19 @@ const City = () => {
           </div>
         </div>
 
+        <div className={styles.groupPriceCard}>
+          <div className={styles.priceTitle}>
+            Экскурсия для организованных групп 5 - 50 человек (делегации, форумы, деловые мероприятия)
+          </div>
+          <div className={styles.priceValue}>2 часа - 7 500 ₽, 3 часа 9500 ₽</div>
+          <div className={styles.priceIncludes}>
+            Включено: экскурсионное сопровождение, карта города.
+          </div>
+          <div className={styles.priceNote}>
+            Транспорт бронируется дополнительно цена по запросу.
+          </div>
+        </div>
+
         <div className={styles.additionalCard}>
           <span className={styles.boldText}>Дополнительно:</span> посещение аутентичного ресторана сибирской кухни, ресторана-пивоварни, сувенирных магазинов или одного из музеев города (оплачивается отдельно).
         </div>
@@ -113,6 +125,30 @@ const City = () => {
             <span className={styles.buttonIcon}>📞</span> 89235003020
           </button>
         </div>
+
+        <div className={styles.imageGallery}>
+          <div className={styles.galleryGrid}>
+            <div className={styles.galleryItem}>
+              <img src={human} alt="human" className={styles.galleryImage} />
+            </div>
+            <div className={styles.galleryItem}>
+              <img src={manhourse} alt="manhourse" className={styles.galleryImage} />
+            </div>
+            <div className={styles.galleryItem}>
+              <img src={statue} alt="statue" className={styles.galleryImage} />
+            </div>
+            <div className={styles.galleryItem}>
+              <img src={tallstatue} alt="tallstatue" className={styles.galleryImage} />
+            </div>
+            <div className={styles.galleryItem}>
+              <img src={fire} alt="fire" className={styles.galleryImage} />
+            </div>
+            <div className={styles.galleryItem}>
+              <img src={star} alt="star" className={styles.galleryImage} />
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

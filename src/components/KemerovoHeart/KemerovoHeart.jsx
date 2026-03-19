@@ -1,10 +1,11 @@
+// KemerovoHeart.jsx
 import React from 'react';
 import styles from './KemerovoHeart.module.css';
 import heartImage from '../../assets/heart.png';
 
 const KemerovoHeart = () => {
   return (
-    <section className={styles.heart}>
+    <section className={styles.heart} id="kemerovo-heart">
       <div className={styles.container}>
         <div className={styles.badge}>Столица Кузбасса</div>
         <h2 className={styles.mainTitle}>Кемерово — сердце угольной Сибири</h2>

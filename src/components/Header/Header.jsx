@@ -1,8 +1,10 @@
+// Header.jsx
 import React, { useState, useEffect } from 'react';
 import styles from './Header.module.css';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('hero');
 
   useEffect(() => {
     if (isMenuOpen) {
@@ -16,14 +18,66 @@ const Header = () => {
     };
   }, [isMenuOpen]);
 
+  // Отслеживание активной секции при скролле
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        'hero',
+        'kemerovo-heart',
+        'panoramic-excursions',
+        'city',
+        'depth-kuzbass',
+        'kemerovo-foot',
+        'footer'
+      ];
+
+      const scrollPosition = window.scrollY + 100; // небольшой offset
+
+      for (const sectionId of sections) {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+            setActiveSection(sectionId);
+            break;
+          }
+        }
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const handleLinkClick = (sectionId) => {
-    console.log(`Прокрутка к разделу: ${sectionId}`);
+    setActiveSection(sectionId);
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const headerOffset = 80; // высота хедера
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
     setIsMenuOpen(false);
   };
 
   const handleOverlayClick = () => {
     setIsMenuOpen(false);
   };
+
+  const navItems = [
+    { id: 'hero', label: 'Экскурсии Кемерово' },
+    { id: 'kemerovo-heart', label: 'Сердце Кемерово' },
+    { id: 'panoramic-excursions', label: 'Панорамные экскурсии' },
+    { id: 'city', label: 'Кемерово 360' },
+    { id: 'depth-kuzbass', label: 'Глубина Кузбасса' },
+    { id: 'kemerovo-foot', label: 'Кемерово пешком' },
+    { id: 'footer', label: 'Контакты' }
+  ];
 
   return (
     <>
@@ -32,21 +86,16 @@ const Header = () => {
 
         <nav className={styles.desktopNav}>
           <ul className={styles.navList}>
-            <li className={styles.navItem}>
-              <button onClick={() => handleLinkClick('hero')} className={styles.navLink}>
-                Главная
-              </button>
-            </li>
-            <li className={styles.navItem}>
-              <button onClick={() => handleLinkClick('city')} className={styles.navLink}>
-                О Кемерово
-              </button>
-            </li>
-            <li className={styles.navItem}>
-              <button onClick={() => handleLinkClick('footer')} className={styles.navLink}>
-                Контакты
-              </button>
-            </li>
+            {navItems.map((item) => (
+              <li key={item.id} className={styles.navItem}>
+                <button
+                  onClick={() => handleLinkClick(item.id)}
+                  className={`${styles.navLink} ${activeSection === item.id ? styles.active : ''}`}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -75,21 +124,16 @@ const Header = () => {
 
           <nav className={styles.mobileNav}>
             <ul className={styles.mobileNavList}>
-              <li>
-                <button onClick={() => handleLinkClick('hero')} className={styles.mobileNavLink}>
-                  Главная
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleLinkClick('city')} className={styles.mobileNavLink}>
-                  О Кемерово
-                </button>
-              </li>
-              <li>
-                <button onClick={() => handleLinkClick('footer')} className={styles.mobileNavLink}>
-                  Контакты
-                </button>
-              </li>
+              {navItems.map((item) => (
+                <li key={item.id}>
+                  <button
+                    onClick={() => handleLinkClick(item.id)}
+                    className={`${styles.mobileNavLink} ${activeSection === item.id ? styles.mobileActive : ''}`}
+                  >
+                    {item.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </nav>
 

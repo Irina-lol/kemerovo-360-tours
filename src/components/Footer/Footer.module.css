@@ -1,209 +1,234 @@
+/* Footer.module.css */
 .footer {
-  background-color: #0B1C2F;
-  color: #FFFFFF;
-  padding: 60px 0 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #a78867e8;
+  padding: 80px 2rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 24px;
+  text-align: left;
 }
 
-.mainSection {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr 1fr;
-  gap: 60px;
-  margin-bottom: 60px;
-}
-
-.title {
-  font-size: 28px;
-  font-weight: 700;
-  margin: 0 0 16px;
-  color: #FFFFFF;
+.mainTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
 }
 
 .description {
-  font-size: 16px;
+  font-size: 1.1rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0 0 24px;
+  color: #ffffff;
+  margin: 0 0 3rem 0;
+  max-width: 900px;
 }
 
-.guideInfo {
-  border-left: 3px solid #F5A623;
-  padding-left: 16px;
+.cardsRow {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-bottom: 4rem;
 }
 
-.guideName {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 8px;
-  color: #F5A623;
+.card {
+  background-color: #E3E6EB;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: left;
 }
 
-.guideCreds {
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.7);
+.cardCircle {
+  width: 48px;
+  height: 48px;
+  background-color: #33363F;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1E2430;
+  margin: 0 0 1rem 0;
+}
+
+.cardText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #33363F;
   margin: 0;
 }
 
-.subtitle {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0 0 20px;
-  color: #FFFFFF;
-  position: relative;
-  padding-bottom: 8px;
+.contactTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 3rem 0;
 }
 
-.subtitle::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 40px;
-  height: 2px;
-  background-color: #F5A623;
+.twoColumns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.leftColumn,
+.rightColumn {
+  text-align: left;
+}
+
+.columnTitle {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0 0 1.5rem 0;
 }
 
 .phone {
-  display: inline-block;
-  font-size: 20px;
-  font-weight: 600;
-  color: #F5A623;
-  text-decoration: none;
-  margin-bottom: 20px;
-  transition: color 0.3s ease;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
 }
 
-.phone:hover {
-  color: #ffb347;
+.columnText {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
 }
 
-.socialButtons {
+.verticalButtons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 1rem;
+  margin-top: 2rem;
+  max-width: 300px;
 }
 
-.socialBtn {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  text-align: left;
-  width: fit-content;
-  min-width: 180px;
-}
-
-.socialBtn.tg {
-  background-color: #229ED9;
-  color: #FFFFFF;
-}
-
-.socialBtn.tg:hover {
-  background-color: #1c8ac0;
-  transform: translateX(4px);
-}
-
-.socialBtn.max {
-  background-color: #FF5A5F;
-  color: #FFFFFF;
-}
-
-.socialBtn.max:hover {
-  background-color: #e64e52;
-  transform: translateX(4px);
-}
-
-.subscribeText {
-  font-size: 14px;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0 0 20px;
-}
-
-.subscribeButtons {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.subscribeBtn {
-  padding: 10px 20px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  background: transparent;
-  border-radius: 4px;
-  font-size: 15px;
+.button {
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  color: #FFFFFF;
+  border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-align: left;
-  width: fit-content;
-  min-width: 180px;
-}
-
-.subscribeBtn.tg:hover {
-  border-color: #229ED9;
-  background-color: rgba(34, 158, 217, 0.1);
-}
-
-.subscribeBtn.max:hover {
-  border-color: #FF5A5F;
-  background-color: rgba(255, 90, 95, 0.1);
-}
-
-.bottomSection {
-  padding-top: 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  display: flex;
-  justify-content: space-between;
+  display: inline-flex;
   align-items: center;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 14px;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 2px solid #ffffff;
+  background-color: #5D3A1A;
+  color: white;
+  width: 100%;
 }
 
-.madeWith {
-  color: rgba(255, 255, 255, 0.3);
+.button:hover {
+  background-color: #7A4F2E;
+  border-color: #7A4F2E;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(93, 58, 26, 0.3);
 }
 
-@media (max-width: 968px) {
-  .mainSection {
-    grid-template-columns: 1fr;
-    gap: 40px;
+.buttonIcon {
+  font-size: 1.2rem;
+}
+
+@media (max-width: 992px) {
+  .mainTitle {
+    font-size: 2.2rem;
   }
 
-  .bottomSection {
-    flex-direction: column;
-    gap: 12px;
-    text-align: center;
+  .contactTitle {
+    font-size: 1.8rem;
+  }
+
+  .phone {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 1.5rem;
+  }
+
+  .mainTitle {
+    font-size: 2rem;
+  }
+
+  .cardsRow {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .twoColumns {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contactTitle {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+
+  .verticalButtons {
+    max-width: 100%;
+  }
+
+  .button {
+    width: 100%;
   }
 }
 
 @media (max-width: 480px) {
   .footer {
-    padding: 40px 0 20px;
+    padding: 40px 1rem;
   }
 
-  .title {
-    font-size: 24px;
+  .mainTitle {
+    font-size: 1.6rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+
+  .cardText {
+    font-size: 0.95rem;
+  }
+
+  .contactTitle {
+    font-size: 1.4rem;
+  }
+
+  .columnTitle {
+    font-size: 1.2rem;
   }
 
   .phone {
-    font-size: 18px;
+    font-size: 1.5rem;
   }
 
-  .socialBtn,
-  .subscribeBtn {
-    width: 100%;
-    text-align: center;
+  .columnText {
+    font-size: 0.95rem;
+  }
+
+  .button {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
   }
 }
