@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Hero.module.css';
 import heroImage from '../../assets/hero.png';
+import heroMobileImage from '../../assets/herotel.jpg';
 
 const Hero = () => {
   return (
@@ -24,7 +25,16 @@ const Hero = () => {
         </div>
 
         <div className={styles.imageWrapper}>
-          <img src={heroImage} alt="Экскурсии в Кемерово" className={styles.image} />
+          <img
+            src={heroImage}
+            alt="Экскурсии в Кемерово"
+            className={styles.image}
+          />
+          <img
+            src={heroMobileImage}
+            alt="Экскурсии в Кемерово - мобильная версия"
+            className={styles.mobileImage}
+          />
         </div>
       </div>
     </section>

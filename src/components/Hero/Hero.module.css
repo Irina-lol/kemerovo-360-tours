@@ -87,6 +87,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
+  position: relative;
 }
 
 .image {
@@ -95,6 +96,13 @@
   max-height: 600px;
   display: block;
   object-fit: contain;
+}
+
+.mobileImage {
+  display: none;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 @media (max-width: 900px) {
@@ -130,26 +138,34 @@
 
 @media (max-width: 768px) {
   .hero {
-    padding: 90px 1rem 2.5rem;
+    padding: 90px 0 2.5rem;
+  }
+
+  .container {
+    gap: 1.5rem;
   }
 
   .content {
     max-width: 100%;
-    padding: 0;
+    padding: 0 1rem;
   }
 
   .title {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    width: 100%;
-    box-sizing: border-box;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   }
 
   .description {
     font-size: 1rem;
     margin-bottom: 1.5rem;
-    width: 100%;
-    box-sizing: border-box;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
   }
 
   .buttonGroup {
@@ -166,22 +182,32 @@
     box-sizing: border-box;
   }
 
-  .title,
-  .description {
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
+  .image {
+    display: none;
   }
 
-  .image {
+  .mobileImage {
+    display: block;
+    width: 100%;
+    height: auto;
     max-height: 350px;
+    object-fit: cover;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    margin-top: 1rem;
+    overflow: hidden;
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    padding: 80px 0.8rem 2rem;
+    padding: 80px 0 2rem;
+  }
+
+  .content {
+    padding: 0 0.8rem;
   }
 
   .title {
@@ -198,7 +224,7 @@
     max-width: 280px;
   }
 
-  .image {
+  .mobileImage {
     max-height: 280px;
   }
 }
@@ -218,7 +244,7 @@
     max-width: 260px;
   }
 
-  .image {
+  .mobileImage {
     max-height: 220px;
   }
 }
