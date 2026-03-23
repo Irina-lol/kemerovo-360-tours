@@ -68,12 +68,12 @@ const Header = () => {
   };
 
   const navItems = [
-    { id: 'hero', label: 'Экскурсии Кемерово' },
-    { id: 'kemerovo-heart', label: 'Сердце Кемерово' },
-    { id: 'panoramic-excursions', label: 'Панорамные экскурсии' },
-    { id: 'city', label: 'Кемерово 360' },
-    { id: 'depth-kuzbass', label: 'Глубина Кузбасса' },
-    { id: 'kemerovo-foot', label: 'Кемерово пешком' },
+    // { id: 'hero', label: 'Экскурсии Кемерово' },
+    { id: 'kemerovo-heart', label: 'Столица Кузбасса' },
+    { id: 'panoramic-excursions', label: 'Услуги' },
+    { id: 'city', label: 'Кемерово 360° | Авто' },
+    { id: 'kemerovo-foot', label: 'Кемерово 360° | Пешком' },
+    { id: 'depth-kuzbass', label: 'Глубина 360° | Угольный разрез' },
     { id: 'footer', label: 'Контакты' }
   ];
 

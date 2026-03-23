@@ -51,7 +51,7 @@
   font-size: 1rem;
   font-weight: 500;
   border: 2px solid transparent;
-  border-radius: 8px;
+  border-radius: 9px;
   cursor: pointer;
   transition: all 0.3s ease;
 }
@@ -96,6 +96,7 @@
   max-height: 600px;
   display: block;
   object-fit: contain;
+  border-radius: 9px;
 }
 
 .mobileImage {

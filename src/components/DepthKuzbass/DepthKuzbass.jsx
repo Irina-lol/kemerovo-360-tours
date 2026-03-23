@@ -8,9 +8,17 @@ const DepthKuzbass = () => {
       <div className={styles.outerContainer}>
         <div className={styles.innerContainer}>
 
-          <div className={styles.badge}>Промышленный туризм</div>
+          <div className={styles.badge}>
+            <svg className={styles.badgeIcon} width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L3 7L12 12L21 7L12 2Z" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+              <path d="M3 12L12 17L21 12" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+              <path d="M3 17L12 22L21 17" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+              <circle cx="12" cy="7" r="2" stroke="currentColor" strokeWidth="1.5" fill="none" />
+            </svg>
+            <span>Промышленный туризм</span>
+          </div>
 
-          <h2 className={styles.mainTitle}>«Глубина 360: угольная история Кузбасса»</h2>
+          <h2 className={styles.mainTitle}>Глубина 360: угольная история Кузбасса</h2>
 
           <h3 className={styles.subTitle}>Промышленная экскурсия на угольный разрез: загляните в сердце угледобычи!</h3>
 
@@ -20,7 +28,18 @@ const DepthKuzbass = () => {
 
           <div className={styles.cardsGrid}>
             <div className={styles.card}>
-              <div className={styles.cardArrow}>➡️</div>
+              <div className={styles.cardArrow}>
+                <svg className={styles.arrowIcon} width="48" height="48" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 20 L90 20 L90 25 L85 25 L85 55 L90 55 L90 60 L10 60 L10 55 L15 55 L15 25 L10 25 L10 20Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M15 25 L15 55" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M85 25 L85 55" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M20 25 L20 55" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" />
+                  <path d="M80 25 L80 55" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" />
+                  <path d="M30 20 L30 15 L70 15 L70 20" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                  <path d="M45 20 L45 12" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M55 20 L55 12" stroke="currentColor" strokeWidth="1.5" />
+                </svg>
+              </div>
               <h4 className={styles.cardTitle}>Экскурсия по городу</h4>
               <p className={styles.cardDescription}>
                 С акцентом на экономике угольной индустрии и остановками у памятника Михайле Волкову и Мемориала «Память шахтерам Кузбасса»
@@ -28,7 +47,18 @@ const DepthKuzbass = () => {
             </div>
 
             <div className={styles.card}>
-              <div className={styles.cardArrow}>➡️</div>
+              <div className={styles.cardArrow}>
+                <svg className={styles.arrowIcon} width="48" height="48" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 20 L90 20 L90 25 L85 25 L85 55 L90 55 L90 60 L10 60 L10 55 L15 55 L15 25 L10 25 L10 20Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M15 25 L15 55" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M85 25 L85 55" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M20 25 L20 55" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" />
+                  <path d="M80 25 L80 55" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" />
+                  <path d="M30 20 L30 15 L70 15 L70 20" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                  <path d="M45 20 L45 12" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M55 20 L55 12" stroke="currentColor" strokeWidth="1.5" />
+                </svg>
+              </div>
               <h4 className={styles.cardTitle}>Кедровский разрез</h4>
               <p className={styles.cardDescription}>
                 Производственный процесс от А до Я: добыча угля, транспортировка и переработка на крупнейшем предприятии
@@ -36,7 +66,18 @@ const DepthKuzbass = () => {
             </div>
 
             <div className={styles.card}>
-              <div className={styles.cardArrow}>➡️</div>
+              <div className={styles.cardArrow}>
+                <svg className={styles.arrowIcon} width="48" height="48" viewBox="0 0 100 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 20 L90 20 L90 25 L85 25 L85 55 L90 55 L90 60 L10 60 L10 55 L15 55 L15 25 L10 25 L10 20Z" fill="none" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M15 25 L15 55" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M85 25 L85 55" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M20 25 L20 55" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" />
+                  <path d="M80 25 L80 55" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 3" />
+                  <path d="M30 20 L30 15 L70 15 L70 20" stroke="currentColor" strokeWidth="1.5" fill="none" />
+                  <path d="M45 20 L45 12" stroke="currentColor" strokeWidth="1.5" />
+                  <path d="M55 20 L55 12" stroke="currentColor" strokeWidth="1.5" />
+                </svg>
+              </div>
               <h4 className={styles.cardTitle}>Уникальные фото</h4>
               <p className={styles.cardDescription}>
                 Захватывающие кадры на фоне крупнейших карьерных машин и панорам разреза
@@ -92,17 +133,6 @@ const DepthKuzbass = () => {
             </div>
           </div>
 
-          <div className={styles.buttonsGroup}>
-            <button className={`${styles.button} ${styles.buttonOutline}`}>
-              <span className={styles.buttonIcon}>📱</span> Забронировать TG
-            </button>
-            <button className={`${styles.button} ${styles.buttonOutline}`}>
-              <span className={styles.buttonIcon}>💬</span> Забронировать MAX
-            </button>
-            <button className={`${styles.button} ${styles.buttonFilled}`}>
-              <span className={styles.buttonIcon}>📞</span> 89235003020
-            </button>
-          </div>
         </div>
       </div>
     </section>

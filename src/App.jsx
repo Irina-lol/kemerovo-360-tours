@@ -69,13 +69,13 @@ function App() {
         <ImageGallery
           images={cityGalleryImages}
         />
-        <DepthKuzbass />
-        <ImageGallery
-          images={depthGalleryImages}
-        />
         <KemerovoFoot />
         <ImageGallery
           images={footGalleryImages}
+        />
+        <DepthKuzbass />
+        <ImageGallery
+          images={depthGalleryImages}
         />
         <Footer />
       </main>

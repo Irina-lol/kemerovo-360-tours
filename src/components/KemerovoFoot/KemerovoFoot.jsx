@@ -7,7 +7,7 @@ const KemerovoFoot = () => {
       <div className={styles.outerContainer}>
         <div className={styles.innerContainer}>
 
-          <h2 className={styles.mainTitle}>«Кемерово 360°: пешком»</h2>
+          <h2 className={styles.mainTitle}>Кемерово 360°: пешком</h2>
 
           <h3 className={styles.subTitle}>
             Лучшее соотношение цены и качества для глубокого погружения в атмосферу города
@@ -21,8 +21,10 @@ const KemerovoFoot = () => {
 
           <div className={styles.cardsGrid}>
             <div className={styles.card}>
-              <div className={styles.cardSquare}></div>
-              <h5 className={styles.cardTitle}>Исторический Центр</h5>
+              <div className={styles.cardHeader}>
+                <div className={styles.cardSquare}></div>
+                <h5 className={styles.cardTitle}>Исторический Центр</h5>
+              </div>
               <ul className={styles.list}>
                 <li>Библиотека и панно «Сумма технологий» — футуристический символ науки Кузбасса</li>
                 <li>Памятник Михайло Волкову — первооткрывателю кузнецких углей</li>
@@ -32,22 +34,16 @@ const KemerovoFoot = () => {
             </div>
 
             <div className={styles.card}>
-              <div className={styles.cardSquare}></div>
-              <h5 className={styles.cardTitle}>Культурное достояние</h5>
+              <div className={styles.cardHeader}>
+                <div className={styles.cardSquare}></div>
+                <h5 className={styles.cardTitle}>Культурное достояние</h5>
+              </div>
               <ul className={styles.list}>
                 <li>Драмтеатр и Театр кукол — архитектурные жемчужины</li>
                 <li>Ансамбли сталинской неоклассики и Площадь Советов</li>
                 <li>Площадь Пушкина и квартал Эрнста Мая (Соцгород)</li>
                 <li>Филармония Кузбасса и площадь Искусств</li>
               </ul>
-            </div>
-
-            <div className={styles.card}>
-              <div className={styles.cardSquare}></div>
-              <h5 className={styles.cardTitle}>Гастрономическая пауза</h5>
-              <p className={styles.cardText}>
-                Дегустация десертов в легендарном кафе «Подорожник» (более 30 лет в городе)! Согреемся и попробуем фирменные десерты — визитную карточку Кемерово. Город «на вкус»!
-              </p>
             </div>
           </div>
 
@@ -86,18 +82,6 @@ const KemerovoFoot = () => {
               <div className={styles.priceCardLabel}>Дополнительно</div>
               <div className={styles.priceCardValue}>Марка для открытки 30-50 ₽ (по желанию)</div>
             </div>
-          </div>
-
-          <div className={styles.buttonsGroup}>
-            <button className={`${styles.button} ${styles.buttonOutline}`}>
-              <span className={styles.buttonIcon}>📱</span> Забронировать TG
-            </button>
-            <button className={`${styles.button} ${styles.buttonOutline}`}>
-              <span className={styles.buttonIcon}>💬</span> Забронировать MAX
-            </button>
-            <button className={`${styles.button} ${styles.buttonFilled}`}>
-              <span className={styles.buttonIcon}>📞</span> 89235003020
-            </button>
           </div>
 
         </div>

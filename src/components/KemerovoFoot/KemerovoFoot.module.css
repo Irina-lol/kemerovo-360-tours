@@ -13,7 +13,7 @@
 }
 
 .innerContainer {
-  background-color: #A5C3A1;
+  background-color: #e8f0e6;
   padding: 3rem;
   border-radius: 40px;
   width: 100%;
@@ -57,13 +57,21 @@
 
 .cardsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-bottom: 4rem;
+  justify-content: center;
 }
 
 .card {
   text-align: left;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .cardSquare {
@@ -71,14 +79,14 @@
   height: 40px;
   background-color: #E3E6EB;
   border-radius: 12px;
-  margin-bottom: 1.2rem;
+  flex-shrink: 0;
 }
 
 .cardTitle {
   font-size: 1.5rem;
   font-weight: bold;
   color: #1E2430;
-  margin: 0 0 1rem 0;
+  margin: 0;
 }
 
 .list {
@@ -88,7 +96,7 @@
 }
 
 .list li {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #33363F;
   margin-bottom: 0.8rem;
@@ -104,19 +112,13 @@
   font-size: 1.2rem;
 }
 
-.cardText {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #33363F;
-  margin: 0;
-}
-
 .twoColumns {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3rem;
   margin-bottom: 4rem;
   align-items: start;
+  justify-content: center;
 }
 
 .column {
@@ -131,7 +133,7 @@
 }
 
 .columnText {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #33363F;
   margin: 0;
@@ -144,7 +146,7 @@
 }
 
 .infoList li {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #33363F;
   margin-bottom: 0.8rem;
@@ -161,11 +163,11 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0;
 }
 
 .priceCard {
-  background-color: #fba71f;
+  background-color: #f5e0d3;
   padding: 1.8rem;
   border-radius: 16px;
   text-align: left;
@@ -185,58 +187,6 @@
   font-weight: 600;
   color: #1E2430;
   line-height: 1.4;
-}
-
-.buttonsGroup {
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 auto 3rem;
-}
-
-.button {
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  border: 2px solid transparent;
-}
-
-.buttonIcon {
-  font-size: 1.2rem;
-}
-
-.buttonOutline {
-  background-color: transparent;
-  border-color: #33363F;
-  color: #1E2430;
-}
-
-.buttonOutline:hover {
-  background-color: #33363F;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(47, 111, 166, 0.3);
-}
-
-.buttonFilled {
-  background-color: #33363F;
-  border-color: #33363F;
-  color: white;
-}
-
-.buttonFilled:hover {
-  background-color: #1E4F7A;
-  border-color: #1E4F7A;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(47, 111, 166, 0.3);
 }
 
 @media (max-width: 992px) {
@@ -296,17 +246,6 @@
     grid-template-columns: 1fr;
     gap: 1rem;
   }
-
-  .buttonsGroup {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .button {
-    width: 100%;
-    max-width: 300px;
-  }
 }
 
 @media (max-width: 480px) {
@@ -338,11 +277,15 @@
     font-size: 1.3rem;
   }
 
-  .priceCardValue {
-    font-size: 1.1rem;
+  .columnText {
+    font-size: 1rem;
   }
 
-  .button {
-    max-width: 280px;
+  .infoList li {
+    font-size: 1rem;
+  }
+
+  .priceCardValue {
+    font-size: 1.1rem;
   }
 }

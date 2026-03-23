@@ -11,16 +11,24 @@
 }
 
 .badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   background-color: #E3E6EB;
   color: #33363F;
   padding: 0.5rem 1.2rem;
-  border-radius: 12px;
+  border-radius: 9px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
   letter-spacing: 0.5px;
   text-transform: uppercase;
+  width: fit-content;
+}
+
+.badgeIcon {
+  flex-shrink: 0;
+  color: #33363F;
 }
 
 .mainTitle {
@@ -43,7 +51,7 @@
 .card {
   background-color: #E3E6EB;
   border: none;
-  border-radius: 12px;
+  border-radius: 9px;
   padding: 2rem 1.5rem;
   text-align: left;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -61,24 +69,28 @@
   background-color: #33363F;
   border-radius: 50%;
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 .cardTitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #1E2430;
   margin: 0 0 0.8rem 0;
 }
 
 .cardDescription {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: #33363F;
   margin: 0;
 }
 
 .secondTitle {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #1E2430;
   margin: 0 0 3rem 0;
@@ -106,7 +118,7 @@
 .guideImage {
   max-width: 90%;
   height: auto;
-  border-radius: 12px;
+  border-radius: 9px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   margin: 0;
 }
@@ -116,7 +128,7 @@
 }
 
 .guideName {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin: 0 0 1.5rem 0;
   color: #1E2430;
