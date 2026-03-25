@@ -39,7 +39,7 @@
 .card {
   background-color: #E3E6EB;
   padding: 2rem;
-  border-radius: 16px;
+  border-radius: 9px;
   text-align: left;
 }
 
@@ -48,25 +48,34 @@
   height: 48px;
   background-color: #33363F;
   border-radius: 50%;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardIcon {
+  width: 28px;
+  height: 28px;
+  color: white;
 }
 
 .cardTitle {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #1E2430;
   margin: 0 0 1rem 0;
 }
 
 .cardText {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #33363F;
   margin: 0;
 }
 
 .contactTitle {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: bold;
   color: #ffffff;
   margin: 0 0 3rem 0;
@@ -85,14 +94,14 @@
 }
 
 .columnTitle {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #ffffff;
   margin: 0 0 1.5rem 0;
 }
 
 .phone {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: #ffffff;
   margin-bottom: 1rem;
@@ -100,7 +109,7 @@
 }
 
 .columnText {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: #ffffff;
   margin: 0 0 1rem 0;
@@ -199,7 +208,7 @@
   }
 
   .description {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .cardTitle {
@@ -207,11 +216,11 @@
   }
 
   .cardText {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .contactTitle {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .columnTitle {
@@ -219,15 +228,15 @@
   }
 
   .phone {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 
   .columnText {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
 
   .button {
     padding: 0.7rem 1.5rem;
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }

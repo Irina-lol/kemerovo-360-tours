@@ -266,7 +266,7 @@
   }
 
   .description {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .sectionTitle {
@@ -274,15 +274,15 @@
   }
 
   .cardTitle {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .list {
+    font-size: 1.1rem;
   }
 
   .columnText {
-    font-size: 1rem;
-  }
-
-  .infoList li {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
   .priceCardValue {

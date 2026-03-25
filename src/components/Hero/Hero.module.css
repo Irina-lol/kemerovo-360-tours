@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.google.com/specimen/Playfair+Display?preview.lang=ru_Cyrl');
+
 .hero {
   background: linear-gradient(135deg, #C7D9F2 0%, #E3E6EB 100%);
   min-height: 100vh;
@@ -24,6 +27,7 @@
 
 .title {
   font-size: 2.5rem;
+  font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   line-height: 1.2;
   margin: 0 0 1.5rem 0;
@@ -33,6 +37,7 @@
 
 .description {
   font-size: 1.1rem;
+  font-family: 'Playfair Display', sans-serif;
   line-height: 1.6;
   margin: 0 0 2rem 0;
   color: #33363F;
@@ -217,7 +222,7 @@
   }
 
   .description {
-    font-size: 0.95rem;
+    font-size: 1rem;
     max-width: 280px;
   }
 
@@ -232,12 +237,12 @@
 
 @media (max-width: 360px) {
   .title {
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     max-width: 260px;
   }
 
   .description {
-    font-size: 0.9rem;
+    font-size: 1rem;
     max-width: 260px;
   }
 

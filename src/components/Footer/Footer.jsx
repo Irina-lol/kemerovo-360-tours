@@ -14,7 +14,15 @@ const Footer = () => {
 
         <div className={styles.cardsRow}>
           <div className={styles.card}>
-            <div className={styles.cardCircle}></div>
+            <div className={styles.cardCircle}>
+              <svg className={styles.cardIcon} width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4H20V18H4V4Z" stroke="white" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+                <path d="M8 8H16" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                <path d="M8 12H14" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                <path d="M8 16H12" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
+                <path d="M18 22L12 18L6 22" stroke="white" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+              </svg>
+            </div>
             <h3 className={styles.cardTitle}>Удобное бронирование</h3>
             <p className={styles.cardText}>
               Выберите дату и время экскурсии в удобной форме записи. Бронирование индивидуальных туров возможно день в день
@@ -22,7 +30,12 @@ const Footer = () => {
           </div>
 
           <div className={styles.card}>
-            <div className={styles.cardCircle}></div>
+            <div className={styles.cardCircle}>
+              <svg className={styles.cardIcon} width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L15 8.5L22 9.5L17 14L18.5 21L12 17.5L5.5 21L7 14L2 9.5L9 8.5L12 2Z" stroke="white" strokeWidth="1.5" fill="none" strokeLinejoin="round" />
+                <circle cx="12" cy="12" r="2" stroke="white" strokeWidth="1.5" fill="none" />
+              </svg>
+            </div>
             <h3 className={styles.cardTitle}>Специальные предложения</h3>
             <p className={styles.cardText}>
               Сезонные акции, корпоративные программы и подарочные сертификаты на экскурсии по Кузбассу
