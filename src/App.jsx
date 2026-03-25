@@ -33,8 +33,8 @@ import star from './assets/star.jpg';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const telegramLink = "@kemerovo360_guide_bot";
-  const maxLink = "https://wa.me/79235003020";
+  const telegramLink = "https://t.me/kemerovo360_guide_bot";
+  "https://max.ru/u/89235003020";
   const phoneNumber = "89235003020";
 
   const toggleMenu = () => {
